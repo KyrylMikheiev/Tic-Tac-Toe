@@ -5,13 +5,13 @@ import { useState, useEffect } from "react";
 
 export default function App() {
 
-    const [gameStarted, setGameStarted] = useState(false);
     const [isPressed, setIsPressed] = useState(true);
     const [gameOutcome, setGameOutcome] = useState("I will tell the outcome of each game!");
     const [tiles, setTiles] = useState(Array(9).fill(null));
     const [playerTurn, setPlayerTurn] = useState("X");
 
     function handleTileClick(index) {
+
       setPlayerTurn(playerTurn === "X" ? "O" : "X");
       if (tiles[index]) return;
       
@@ -22,7 +22,6 @@ export default function App() {
 
     const handleButtonClick = () => {
       setTiles(Array(9).fill(null));
-      setGameStarted(true);
         setGameOutcome("Game is running...");
         setIsPressed(true);
 
@@ -43,7 +42,7 @@ export default function App() {
                 <Stats />
                 <PlayField tiles={tiles} handleTileClick={handleTileClick}/>
                 <label>{gameOutcome}</label>
-                <button onClick={handleButtonClick}>{gameStarted ? "Play Again" : "Play"}</button>
+                <button onClick={handleButtonClick}>Play Again</button>
             </div>
     )
 }

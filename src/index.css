@@ -24,11 +24,12 @@ body {
     height: 360px;
 }
 
-.playField div {
+.tile {
+    font-size: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 5px solid white;
+    align-items: center;
+    border: 3px solid white;
 }
 
 .app .header {
@@ -68,7 +69,7 @@ td {
     width: 120px;
 }
 
-.playField div:hover {
+.playField .tile:hover {
     cursor: pointer;
     background-color: green;
 }
