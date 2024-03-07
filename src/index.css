@@ -1,13 +1,123 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.playField {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 360px;
+    height: 360px;
+}
+
+.playField div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+}
+
+.app .header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.app .bounceText {
+    animation: bounce 1s;   
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid white;
+    text-align: center;
+    width: 120px;
+}
+
+.playField div:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.app button {
+    margin: 30px 0;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.app button:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.playField .div1 {
+    border-left: none;
+    border-top: none;
+}
+
+.playField .div2 {
+    border-top: none;
+}
+
+.playField .div3 {
+    border-right: none;
+    border-top: none;
+}
+
+.playField .div4 {
+    border-left: none;
+}
+
+.playField .div6 {
+    border-right: none;
+}
+.playField .div7 {
+    border-left: none;
+    border-bottom: none;
+}
+
+.playField .div8 {
+    border-bottom: none;
+
+}
+
+.playField .div9 {
+    border-right: none;
+    border-bottom: none;
 }
