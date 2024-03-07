@@ -5,11 +5,26 @@ import { useState, useEffect } from "react";
 
 export default function App() {
 
-
+    const [gameStarted, setGameStarted] = useState(false);
     const [isPressed, setIsPressed] = useState(true);
+    const [gameOutcome, setGameOutcome] = useState("I will tell the outcome of each game!");
+    const [tiles, setTiles] = useState(Array(9).fill(null));
+    const [playerTurn, setPlayerTurn] = useState("X");
+
+    function handleTileClick(index) {
+      setPlayerTurn(playerTurn === "X" ? "O" : "X");
+      if (tiles[index]) return;
       
+      const newTiles = [...tiles];
+      newTiles[index] = playerTurn;
+      setTiles(newTiles);
+    }
+
     const handleButtonClick = () => {
-        setIsPressed(true);      
+      setGameStarted(true);
+        setGameOutcome("Game is running...");
+        setIsPressed(true);
+
     };
 
     useEffect(() => {
@@ -17,7 +32,6 @@ export default function App() {
           setTimeout(() => {
             setIsPressed(false);
           }, 1000); // Adjust the duration based on your CSS animation
-    
         }
       }, [isPressed]);
     
@@ -26,8 +40,9 @@ export default function App() {
             <div className="app">
                 <h1 className={`header ${isPressed ? 'bounceText' : ''}`}>TicTacToe</h1>
                 <Stats />
-                <PlayField/>
-                <button onClick={handleButtonClick}>Play Again</button>
+                <PlayField tiles={tiles} handleTileClick={handleTileClick}/>
+                <label>{gameOutcome}</label>
+                <button onClick={handleButtonClick}>{gameStarted ? "Play Again" : "Play"}</button>
             </div>
     )
 }

@@ -86,38 +86,46 @@ td {
     background-color: green;
 }
 
-.playField .div1 {
+.app label {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.playField .tile0 {
     border-left: none;
     border-top: none;
 }
 
-.playField .div2 {
+.playField .tile1 {
     border-top: none;
 }
 
-.playField .div3 {
+.playField .tile2 {
     border-right: none;
     border-top: none;
 }
 
-.playField .div4 {
+.playField .tile3 {
     border-left: none;
 }
 
-.playField .div6 {
+.playField .tile5 {
     border-right: none;
 }
-.playField .div7 {
+.playField .tile6 {
     border-left: none;
     border-bottom: none;
 }
 
-.playField .div8 {
+.playField .tile7 {
     border-bottom: none;
 
 }
 
-.playField .div9 {
+.playField .tile8 {
     border-right: none;
     border-bottom: none;
 }
