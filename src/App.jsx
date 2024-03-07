@@ -21,6 +21,7 @@ export default function App() {
     }
 
     const handleButtonClick = () => {
+      setTiles(Array(9).fill(null));
       setGameStarted(true);
         setGameOutcome("Game is running...");
         setIsPressed(true);
