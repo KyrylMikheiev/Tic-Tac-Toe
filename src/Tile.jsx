@@ -1,8 +1,8 @@
 
 
-export default function Tile({className, onClick, value}) {
+export default function Tile({className, onClick, value, disabled}) {
 
     return (
-        <div className={`tile ${className}`} onClick={onClick}>{value}</div>
+        <button className={`tile ${className}`} onClick={onClick} disabled={disabled}>{value}</button>
     )
 }

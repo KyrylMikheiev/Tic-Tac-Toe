@@ -1,7 +1,7 @@
 
 
 
-export default function Stats() {
+export default function Stats({wins, draws, looses}) {
     return (
             <div className="stats">
                 <table>
@@ -14,9 +14,9 @@ export default function Stats() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
+                            <td>{wins}</td>
+                            <td>{draws}</td>
+                            <td>{looses}</td>
                         </tr>
                     </tbody>
                 </table>
