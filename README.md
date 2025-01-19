@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# How it looks like
+
+![ScreenRecording2025-01-19235619-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9de3cea6-41dd-49c4-9b08-abf5b8143632)
+
+# To Start the project use 
+### `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
